@@ -6,21 +6,24 @@ function Todo(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function onButtonClick() {
-    console.log(props.text);
+     setModalIsOpen(true);
+  }
 
-    setModalIsOpen(true);
+  function OnBackdropClick(){
+    //console.log(props.text);
+    setModalIsOpen(false);
   }
 
   return (
     <div className="card">
       <h2>{props.text}</h2>
       <div className="actions">
-        <button className="btn" onClick={onButtonClick} onChange={modalIsOpen}>
+        <button className="btn" onClick={onButtonClick}>
           Delete
         </button>
       </div>
-      {modalIsOpen && <Modal />}
-      {modalIsOpen ? <Backdrop /> : null}
+      {modalIsOpen && <Modal onCancel={OnBackdropClick} onConfirm={OnBackdropClick} />}
+      {modalIsOpen ? <Backdrop onCancel={OnBackdropClick} /> : null}
     </div>
   );
 }

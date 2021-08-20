@@ -1,11 +1,19 @@
-function Modal() {
+function Modal(props) {
+  
+  function onButtonConfirmClick() {
+    props.onConfirm();
+  }
 
   return (
     <div className="modal">
       <p>Are you shure</p>
-      <button className="btn btn--alt">Cancel</button>
-      <button className="btn">Confirm</button>
-    </div>  
+      <button className="btn btn--alt" onClick={props.onCancel}>
+        Cancel
+      </button>
+      <button className="btn" onClick={onButtonConfirmClick}>
+        Confirm
+      </button>
+    </div>
   );
 }
 
