@@ -15,6 +15,7 @@ function Todo(props) {
   }
 
   return (
+   <div > 
     <div className="card">
       <h2>{props.text}</h2>
       <div className="actions">
@@ -24,6 +25,7 @@ function Todo(props) {
       </div>
       {modalIsOpen && <Modal onCancel={OnBackdropClick} onConfirm={OnBackdropClick} />}
       {modalIsOpen ? <Backdrop onCancel={OnBackdropClick} /> : null}
+    </div>
     </div>
   );
 }

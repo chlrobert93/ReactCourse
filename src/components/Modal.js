@@ -1,3 +1,5 @@
+import "../index.css";
+
 function Modal(props) {
   
   function onButtonConfirmClick() {
@@ -6,7 +8,7 @@ function Modal(props) {
 
   return (
     <div className="modal">
-      <p>Are you shure</p>
+      <p className="modal-mensaje">Are you shure</p>
       <button className="btn btn--alt" onClick={props.onCancel}>
         Cancel
       </button>
