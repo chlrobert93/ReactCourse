@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  margin: 2rem;
+  /*margin: 2rem;*/
   background-color: #222222;
   background: repeating-linear-gradient(
       45deg,
@@ -54,21 +54,37 @@ h1, h2, p {
 }
 
 .contenido{
-  display: flex;
+  /*Flex*/
+  /*display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 119px;
+  gap: 119px;*/
+  font-family: sans-serif;
+  margin: 4rem;
+
+  /*Grid*/
+  display: grid;
+  /*grid-template-columns: 1fr 1fr  1fr;*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  /*Centrar bloque*/
+  justify-content: center;
+  align-content: center;
+
+  column-gap: 3rem;
+  row-gap: 4rem;
 }
 
 .card {
   background: linear-gradient(to left, #5433ff, #20bdff, #a5fecb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   border-radius: 4px;
   box-shadow: 0 1px 4px rgb(66, 14, 255);
-  width: 21rem;
-  margin:.5rem auto;
+ /* width: 21rem;*/
+  /*margin:.5rem auto;*/
   padding: 2rem;
+ /*height: 500px;*/
+
 }
 
 .actions {
@@ -79,7 +95,6 @@ h1, h2, p {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background: linear-gradient(to left, #5433ff, #20bdff, #a5fecb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   padding: 1rem;
   text-align: center;
   width: 30rem;

@@ -9,6 +9,9 @@ function App() {
       <Todo text='Master React' />
       <Todo text='Master React' />
       <Todo text='Master React' />
+      <Todo text='Master React' />
+      <Todo text='Master React' />
+      <Todo text='Master React' />
     </div>
     
   );
